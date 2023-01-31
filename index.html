@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Countdown</title>
+  </head>
+  <body>
+    <img src="./assets/top-image.svg" alt="" width="100%" />
+    <main>
+      <section class="container">
+        <div class="timer-container">
+          <h1>Ready to launch in...</h1>
+          <div class="timer">
+            <div class="time">
+              <small>Dias</small>
+              <h2 id="days"></h2>
+            </div>
+            <span>:</span>
+            <div class="time">
+              <small>Horas</small>
+              <h2 id="hours"></h2>
+            </div>
+            <span>:</span>
+            <div class="time">
+              <small>Minutos</small>
+              <h2 id="minutes"></h2>
+            </div>
+            <span>:</span>
+            <div class="time">
+              <small>Segundos</small>
+              <h2 id="seconds"></h2>
+            </div>
+          </div>
+          <p>Inscreva-se para saber mais sobre o lançamento</p>
+          <button
+            onclick="abreModal()"
+            id="btn-open-modal"
+            class="btn btn-submit"
+          >
+            Inscreva-se
+          </button>
+        </div>
+        <div class="img-container">
+          <div class="image">
+            <img src="./assets/rocket.svg" alt="" />
+          </div>
+        </div>
+      </section>
+      <div id="modal" style="display: none">
+        <div
+          class="containerModal"
+          style="justify-content: center; align-items: center"
+        >
+          <div class="bg-modal"></div>
+
+          <div class="modalBox" style="max-width: 80vw; position: static">
+            <button class="btn-close" onclick="fechaModal()">&#10006;</button>
+            <form>
+              <ul class="form-container">
+                <li class="form-row">
+                  <label for="">Nome:</label>
+                  <input type="text" name="nome" id="nome" />
+                </li>
+                <li class="form-row">
+                  <label for="">E-mail:</label>
+                  <input type="email" name="email" id="email" />
+                </li>
+                <li class="form-row">
+                  <label for="">Contato:</label>
+                  <input type="text" name="contato" id="contato" />
+                </li>
+              </ul>
+
+              <button class="btn-submit" onclick="fechaModal()" type="submit">
+                Enviar
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <img src="./assets/bottom-image.svg" alt="" width="100%" />
+    <script src="./scripts.js"></script>
+  </body>
+</html>
